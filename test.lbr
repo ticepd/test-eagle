@@ -114,6 +114,11 @@
 <wire x1="10.16" y1="-6.35" x2="-8.89" y2="-6.35" width="0.127" layer="21"/>
 <wire x1="-8.89" y1="-6.35" x2="-8.89" y2="6.35" width="0.127" layer="21"/>
 </package>
+<package name="C(CER)">
+<pad name="P$1" x="-1.27" y="0" drill="0.8"/>
+<pad name="P$2" x="1.27" y="0" drill="0.8"/>
+<circle x="0" y="0" radius="1.79605" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="R">
@@ -123,6 +128,12 @@
 <wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="5.08" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="-2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+</symbol>
+<symbol name="C(CER)">
+<pin name="P$1" x="-7.62" y="0" length="middle"/>
+<pin name="P$2" x="10.16" y="0" length="middle" rot="R180"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
 </symbol>
 <symbol name="C">
 <pin name="P$1" x="-15.24" y="0" length="middle"/>
@@ -180,6 +191,22 @@
 </technologies>
 </device>
 <device name="10W" package="R(10)">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="C(CER)">
+<gates>
+<gate name="G$1" symbol="C(CER)" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="C(CER)">
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>

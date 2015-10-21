@@ -106,6 +106,14 @@
 <pad name="P$2" x="2.54" y="0" drill="0.8" shape="square"/>
 <circle x="0" y="0" radius="4.57905" width="0.127" layer="21"/>
 </package>
+<package name="R(10)">
+<pad name="P$1" x="-10.16" y="0" drill="0.8" shape="offset"/>
+<pad name="P$2" x="11.43" y="0" drill="0.8" shape="offset" rot="R180"/>
+<wire x1="-8.89" y1="6.35" x2="10.16" y2="6.35" width="0.127" layer="21"/>
+<wire x1="10.16" y1="6.35" x2="10.16" y2="-6.35" width="0.127" layer="21"/>
+<wire x1="10.16" y1="-6.35" x2="-8.89" y2="-6.35" width="0.127" layer="21"/>
+<wire x1="-8.89" y1="-6.35" x2="-8.89" y2="6.35" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="R">
@@ -163,6 +171,15 @@
 </technologies>
 </device>
 <device name="1W" package="R(1)">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="10W" package="R(10)">
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>

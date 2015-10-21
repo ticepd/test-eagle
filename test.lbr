@@ -80,6 +80,17 @@
 <wire x1="3.81" y1="-1.27" x2="-2.54" y2="-1.27" width="0.127" layer="21"/>
 <wire x1="-2.54" y1="-1.27" x2="-2.54" y2="0" width="0.127" layer="21"/>
 <wire x1="3.81" y1="0" x2="6.35" y2="0" width="0.127" layer="21"/>
+<package name="R(1/2)">
+<pad name="P$1" x="-6.35" y="0" drill="0.8" shape="long"/>
+<pad name="P$2" x="8.89" y="0" drill="0.8" shape="long"/>
+<wire x1="-6.35" y1="0" x2="-3.81" y2="0" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="0" x2="-3.81" y2="2.54" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="2.54" x2="6.35" y2="2.54" width="0.127" layer="21"/>
+<wire x1="6.35" y1="2.54" x2="6.35" y2="0" width="0.127" layer="21"/>
+<wire x1="6.35" y1="0" x2="6.35" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="6.35" y1="-2.54" x2="-3.81" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="-2.54" x2="-3.81" y2="0" width="0.127" layer="21"/>
+<wire x1="6.35" y1="0" x2="8.89" y2="0" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -108,6 +119,7 @@
 </technologies>
 </device>
 <device name="1/4W" package="R(1/4)">
+<device name="" package="R(1/2)">
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
